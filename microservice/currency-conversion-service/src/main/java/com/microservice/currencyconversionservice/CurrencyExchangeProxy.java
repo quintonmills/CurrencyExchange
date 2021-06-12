@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 //@FeignClient(name="currency-exchange", url="localhost:8000")
 
-@FeignClient(name="currency-exchange")
+@FeignClient(name="currency-exchange-service")//feign client talking to eureka to pick up instances and load balance between them
 public interface CurrencyExchangeProxy {
 	
 	@GetMapping("/currency-exchange/from/{from}/to/{to}")
